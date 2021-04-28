@@ -30,6 +30,10 @@ const IOdometer = {
     formatFunction: {
       type: Function,
       required: false
+    },
+    minIntegerLen: {
+      type: Number,
+      required: false
     }
   },
   data() {
@@ -79,7 +83,8 @@ const IOdometer = {
         theme: that.theme,
         duration: that.duration,
         animation: that.animation,
-        formatFunction: that.formatFunction
+        formatFunction: that.formatFunction,
+        minIntegerLen: that.minIntegerLen
       });
 
       instance.render();
